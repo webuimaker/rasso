@@ -1,0 +1,40 @@
+
+  <!-- ======= Top Section ======= -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+ 	<div class="container">
+          <a class="navbar-brand" href="#"><img src="/img/logo.png" alt="" class="img-fluid"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+  		  <div class="collapse navbar-collapse" id="main_nav">
+	        <ul class="navbar-nav ms-auto">
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main }}
+                    {{ if .HasChildren }}
+                        <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }} nav-item dropdown">
+                            <a href="#" class="nav-link  dropdown-toggle" data-bs-toggle="dropdown">
+                                {{ .Pre }}
+                                <span>{{ .Name }}</span>
+                            </a>
+                        <ul class="dropdown-menu">
+                            {{ range .Children }}
+                                <li class="dropdown-item{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                                    <a href="{{ .URL }}">{{ .Name }}</a>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </li>                        
+                    {{ else }}
+                        <li class="nav-item">
+                            <a href="{{ .URL }}"  class="nav-link {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                                {{ .Pre }}
+                                <span>{{ .Name }}</span>
+                            </a>
+                        </li>
+                    {{ end }}
+                {{ end }}
+
+        </ul>
+  		  </div> <!-- navbar-collapse.// -->
+ 	</div>
+  </nav>

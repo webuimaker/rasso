@@ -1,0 +1,249 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: 'Poppins';
+  color: #444444;
+  font-size:16px;
+}
+
+a {
+  color: #e03a3c;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e76668;
+  text-decoration: none;
+}
+
+.section{padding:50px 0;}
+
+/* CSS Document */
+
+/*--------------------------------------------------------------
+# Header + Banner
+--------------------------------------------------------------*/
+.fixed-top{background:#fff; box-shadow:0 3px 10px 0 rgba(0, 0, 0, 0.05), inset 0 -0.5px 0 0 rgba(0, 0, 0, 0.1); -moz-box-shadow:0 3px 10px 0 rgba(0, 0, 0, 0.05), inset 0 -0.5px 0 0 rgba(0, 0, 0, 0.1); -webkit-box-shadow:0 3px 10px 0 rgba(0, 0, 0, 0.05), inset 0 -0.5px 0 0 rgba(0, 0, 0, 0.1);}
+.navbar li a{color:#0d4159;}
+.bannerlist span{margin-right:5px;}
+.bannertabs{box-shadow:0 5px 25px 0 rgba(214, 215, 216, 0.6); background:#fff; border-radius:8px; margin:-250px auto 30px; position:relative; z-index:8;}
+.bannertabs ul{margin:0px; padding:0;}
+.bannertabs li{display:inline-block; width:49%; text-align:center; float:left;}
+.bannertabs li a, .bannertabs li a span{display:block; color:#0aa9b9; font-size:38px; font-weight:800; text-transform:uppercase; border-top:8px solid #fff; padding:10px 0 30px;}
+.bannertabs li a:hover{border-top:8px solid #f6bb1f;}
+.bannertabs li:nth-child(2) a{color:#199381;}
+.bannertabs .jobbg{background:#f0f0f0; border-radius:0px 8px 8px 0px;}
+.bannertabs .lookingjob{padding:50px 0; text-align:center;}
+.bannertabs .lookingjob h3{margin-bottom:15px;}
+.bannertabs .lookingjob .btn{background:#0d4159; border:0;}
+.bannertabs .lookingjob .btn:hover{background:#000;}
+
+#hero {
+  width: 100%;
+  height:100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top:-50px;
+  width: 130%;
+  height: 98%;
+  background: #23b258;
+  opacity: 0.8;
+  z-index: 0;
+  border-radius: 0 0 50% 50%;
+  transform: translateX(-50%) translateY(18px) rotate(2deg);
+}
+
+#hero::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 130%;
+  height: 95%;
+  background: linear-gradient(to right, rgba(21, 97, 104, 0.4), rgba(33, 148, 130, 0.6));
+  z-index: 0;
+  border-radius: 0 0 50% 50%;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.herocarousel{z-index:1; position:relative;}
+#hero .carousel-item{z-index:1;}
+#hero .carousel-item img{float:right;}
+#hero .carousel-caption{top:15.00rem; max-width:50%; right:inherit;}
+#hero .carousel-indicators{display:none;}
+#hero .carousel-item h1, #hero .carousel-item p{font-size:38px; font-weight:600;}
+#hero .carousel-item h2 span{background:#011f2d; padding:8px; display:inline-block;}
+#hero .carousel-item .btn{background:#0d4159; border:0;}
+#hero .carousel-item .btn:hover{background:#000;}
+
+.carousel.fade {
+  opacity: 1;
+}
+.carousel.fade .item {
+  transition: opacity ease-out .7s;
+  left: 0;
+  opacity: 0; /* hide all slides */
+  top: 0;
+  position: absolute;
+  width: 100%;
+  display: block;
+}
+.carousel.fade .item:first-child {
+  top: auto;
+  opacity: 1; /* show first slide */
+  position: relative;
+}
+.carousel.fade .item.active {
+  opacity: 1;
+}
+
+
+/*--------------------------------------------------------------
+# Who We Are
+--------------------------------------------------------------*/
+.whoweare h3{color:#0aa9b9; text-transform:uppercase; font-weight:800; font-size:20px;}
+.whoweare h2{font-weight:800; color:#0d4159;}
+.custom-line{display:inline-block; width:50px; border:1px solid #00a1cd; height:2px; margin-top:-20px; margin-right:8px;}
+
+/*--------------------------------------------------------------
+# Number Section
+--------------------------------------------------------------*/
+.numbersection{background:url(../assets/img/whowebg.png) no-repeat center top; min-height:433px; display:flex; align-items:center;}
+.numbersection h4{font-weight:800; color:#fff; font-size:36px;}
+.numbersection h6{color:#fff; font-size:18px;}
+.numbersection .btn-secondary{width:auto; background:#059baa; border:0; font-size:18px; padding:8px 30px;}
+.numbersection .btn-secondary:hover{background:#000;}
+
+/*--------------------------------------------------------------
+# staffing Section
+--------------------------------------------------------------*/
+.staffing{background:#f6f7f9; padding:85px 0;}
+.staffing .custom-line, .benefit-section .custom-line{margin-top:-5px;}
+.staffing h3, .benefit-section h3{font-weight:800; color:#0aa9b9; font-size:16px;}
+.staffing h2, .benefit-section h2{font-weight:800; color:#0d4159;}
+.staffing li{list-style:none; background:url(img/icon2.png) no-repeat 0; padding:5px 35px;}
+
+/*--------------------------------------------------------------
+# Benefit Section
+--------------------------------------------------------------*/
+.benefit-section{padding:50px 0;}
+.benefit-section .icon-box{padding: 30px; position: relative; text-align:center; border-radius: 8px; background:#f7f7f7; min-height:315px;}
+.benefit-section h3{font-size:26px; font-weight:800; color:#0d4159; margin:8px 0;}
+
+/*--------------------------------------------------------------
+# Travel Section
+--------------------------------------------------------------*/
+.travelsection{background:url(../img/bg2.png) no-repeat center top; min-height:433px; display:flex; align-items:center;}
+.travelsection h2{font-weight:800; color:#fff; font-size:36px; margin-bottom:25px;}
+.travelsection h2 span{background:#048f9d; padding:5px 10px;}
+.travelsection p{color:#fff; font-size:16px;}
+.travelsection .btn-secondary{width:auto; background:#059baa; border:0; font-size:18px; padding:8px 30px;}
+.travelsection .btn-secondary:hover{background:#000;}
+
+/*--------------------------------------------------------------
+# Benefit Section
+--------------------------------------------------------------*/
+.careersection{padding:50px 0;}
+.jobsection .icon-box{padding: 30px; position: relative; border-radius: 8px; border:3px solid #d7d7d7; margin-bottom:25px;}
+.careersection h3{font-size:26px; font-weight:800; color:#0d4159; margin:8px 0;}
+.careersection .custom-line{margin-top:-5px;}
+.careersection h3{font-weight:800; color:#0aa9b9; font-size:16px;}
+.careersection h2{font-weight:800; color:#0d4159;}
+.buttonbtm{position: absolute; right: 30px; bottom:30px;}
+.jobsection h3{color:#000; font-size:18px; font-weight:600;}
+.jobsection .btn-secondary{width:auto; background:#0d4159; border:0; font-size:18px; padding:8px 30px;}
+.jobsection .btn-secondary:hover{background:#000;}
+.viewjobsbtn a{background:#059baa; border:0;}
+
+/*--------------------------------------------------------------
+# Worked Section
+--------------------------------------------------------------*/
+.workedsection{padding:50px 0;}
+.workedsection .boxsection{box-shadow:0 5px 25px 0 rgba(214, 215, 216, 0.6); background:#fff; border-radius:8px;}
+.workedsection .boxsection h3{color:#0d4159; font-weight:600; font-size:26px; margin-bottom:25px;}
+.workedsection .boxsection h4{font-weight:600; font-size:22px; color:#0d4159;}
+.workedsection .boxsection h6{font-size:16px; color:#0d4159;}
+.workedsection .icon-section{min-height: 120px; display:flex; align-items:center; justify-content:center;}
+.workedsection .boxsection .pl-0{padding-left:0;}
+.workedsection .boxsection .bdr-radius{border-radius:6px 0px 0px 6px;}
+.workedsection h3{font-size:18px; color:#0aa9b9;}
+.workedsection h2{color:#0d4159; font-weight:600; font-size:26px; margin-bottom:25px;}
+
+/*--------------------------------------------------------------
+# Carousels
+--------------------------------------------------------------*/
+.owl-theme .owl-nav [class*="owl-"]{border-radius:0 !important;}
+.carouselsection .owl-theme .owl-nav{display:none;}
+.carouselsection .owl-prev, .carouselsection .owl-next{display:none;}
+.carouselsection .owl-carousel .owl-nav.disabled{display:none;}
+.carouselsection .owl-carousel .owl-dots{display:block;}
+
+.carouselsection .owl-carousel .owl-item img{width:auto; display:inline-block;}
+.carouselsection .owl-theme .owl-dots .owl-dot span{width:16px; height:16px; background:#7f7f7f; margin:15px 8px;}
+.carouselsection .owl-theme .owl-dots .owl-dot.active span, .carouselsection .owl-theme .owl-dots .owl-dot:hover span{background:#000000;}
+
+.carouselright .owl-two .owl-item img{width:auto; display:inline-block;}
+.carouselright .owl-two .owl-item span{display: block;}
+.carouselright .owl-two .owl-item{text-align:center; font-weight:600; color:#242526;}
+.carouselright .owl-theme .owl-nav{display:none;}
+.carouselright .owl-theme .owl-dots .owl-dot span{width:10px; height:10px; background:#7f7f7f; margin:15px 8px;}
+.carouselright .owl-theme .owl-dots .owl-dot.active span, .carouselright .owl-theme .owl-dots .owl-dot:hover span{background:#000000;}
+
+/*--------------------------------------------------------------
+# Footer Section
+--------------------------------------------------------------*/
+.footer{background:#0c4158; padding:65px 0;}
+.footer p{color:#fff;}
+.footer p a{color:#fff;}
+.footer ul{margin:0; padding:0;}
+.footer ul li{list-style:none; padding:0 0 10px; margin:0;}
+.footer ul li a{color:#e0e0e0;}
+.footer h4{color:#fff; font-weight:600; font-size:16px;}
+.foot-mdl{padding:0px 35px;}
+.footer .social-icons li{display:inline-block; margin:0px 5px;}
+
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{   }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}	
+
+@media only screen and (min-width:992px) and (max-width:1078px){
+	
+}
+
+
+@media screen and (max-width:1023px) {
+.navbar-toggler:focus{box-shadow:none;}
+.navbar-toggler .bi.bi-list{font-size:28px;}
+.bannertabs{margin:0px auto 30px;}
+#hero .carousel-caption{top:10rem;}
+.buttonbtm{position:inherit; right:inherit; bottom:inherit;}
+.foot-mdl{padding:0;}
+}
+
+@media screen and (max-width: 767px) {
+.fixed-top{position:relative;}
+#hero .carousel-caption{top:0rem;}
+.navbar-brand{max-width:75%;}
+#hero .carousel-caption{max-width:inherit;}
+#hero .carousel-item h1, #hero .carousel-item p{font-size:16px;}
+.bannertabs li{width:100%;}
+.bannertabs li a, .bannertabs li a span{font-size:18px;}
+.numbersection h4{font-size:24px;}
+.numbersection h6{font-size:15px;}
+.staffing{padding:35px 0;}
+.travelsection h2{font-size:22px;}
+.travelsection h2 span{padding:1px 7px;}
+.careersection{padding:20px 0;}
+}
+
+@media screen and (max-width:479px){}
