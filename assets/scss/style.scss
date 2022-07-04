@@ -29,10 +29,21 @@ a:hover {
 .bannerlist span{margin-right:5px;}
 .bannertabs{box-shadow:0 5px 25px 0 rgba(214, 215, 216, 0.6); background:#fff; border-radius:8px; margin:-250px auto 30px; position:relative; z-index:8;}
 .bannertabs ul{margin:0px; padding:0;}
-.bannertabs li{display:inline-block; width:49%; text-align:center; float:left;}
-.bannertabs li a, .bannertabs li a span{display:block; color:#0aa9b9; font-size:38px; font-weight:800; text-transform:uppercase; border-top:8px solid #fff; padding:10px 0 30px;}
-.bannertabs li a:hover{border-top:8px solid #f6bb1f;}
-.bannertabs li:nth-child(2) a{color:#199381;}
+.bannertabs li{display:inline-block; width:49%; text-align:center; float:left;
+  .nav-link{
+    border: 0px;
+    width: 100%;
+    border-top:8px solid #fff;
+    border-radius: 0px;
+    &.active{
+      border-top:8px solid #f6bb1f;
+    color:#0aa9b9;
+    }
+  }
+}
+.bannertabs li button, .bannertabs li button span{display:block; color:#0aa9b9; font-size:38px; font-weight:800; text-transform:uppercase;  padding:10px 0 30px;}
+.bannertabs li .nav-link:hover{border-top:8px solid #f6bb1f;}
+.bannertabs li:nth-child(2) button{color:#199381;}
 .bannertabs .jobbg{background:#f0f0f0; border-radius:0px 8px 8px 0px;}
 .bannertabs .lookingjob{padding:50px 0; text-align:center;}
 .bannertabs .lookingjob h3{margin-bottom:15px;}
@@ -102,6 +113,20 @@ a:hover {
 }
 .carousel.fade .item.active {
   opacity: 1;
+}
+
+.page-title{
+  background-color: #0c4158;
+  margin-top: 90px;
+  min-height: 160px;
+  padding-top: 50px;
+
+  h1{
+    color: #fff;
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 60px;
+  }
 }
 
 
@@ -247,3 +272,158 @@ a:hover {
 }
 
 @media screen and (max-width:479px){}
+
+
+/*--------------------------------------------------------------
+# Steps
+--------------------------------------------------------------*/
+
+.steps{
+  padding: 0px;
+  li{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    background: none;
+    padding: 0px;
+    min-height: 200px;
+    transition: all 0.4ms ease-in-out;
+
+    .step-number{
+      width:82px;
+      height: 82px;
+      border: 3px solid #e5e5e5;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 80px;
+      font-size: 40px;
+      color: #0f6458;
+      font-weight: 600;
+      margin-right: 20px;
+    }
+    .text{
+      flex-basis: 0;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      min-width: 0;
+      max-width: 100%;
+      padding: 0 0.75rem;
+
+      h3{
+        color: #0d4159;
+        font-size: 28px;
+        font-weight: 600;
+      }
+      p{
+        color: #777;
+        font-size: 18px;
+      }
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: calc(64px + 16px);
+      left: 40px;
+      width: 2px;
+      height: calc(100% - 80px);
+      background-color: #eee;
+      z-index: 0;
+    }
+
+    &:last-child{
+      &::after{
+        display: none;
+      }
+    }
+
+    &:hover{
+      &::after{
+        background-color: #0f6458;
+      }
+      .step-number{
+        background: #0f6458;
+        border: 3px solid #0f6458;
+        color: #fff;
+      }
+    }
+
+  }
+
+}
+
+/**************
+  Button
+****************/
+
+.btn-secondary{width:auto; background:#059baa; border:0; font-size:18px; padding:8px 30px;}
+.btn-secondary:hover{background:#000;}
+
+/**************
+  CTA
+****************/
+.cta{
+  position: relative;
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 0px;
+  background: #0d4159;
+  overflow: hidden;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  &::before{
+      content: ' ';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      background: #212529;
+      opacity: 0.8;
+      pointer-events: none;
+      transition: ease opacity 300ms 100ms;
+      background-color: #0d4159!important;
+      z-index: 1;
+  }
+  .container {
+    position: relative;
+    z-index: 3;
+  }
+ .shape-divider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      z-index: 1;
+
+      svg{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        transform: translate3d(-50%,0,0);
+
+        .custom-svg-fill-color-tertiary-darken{
+          fill: #0d4159;
+        }
+    }
+
+    &.shape-divider-bottom {
+      top: auto;
+      bottom: 0;
+    }
+  }
+  .before-cover{
+    fill: #fff;
+  }
+  
+
+}
+
+
+

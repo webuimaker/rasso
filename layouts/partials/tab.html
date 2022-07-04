@@ -1,17 +1,49 @@
 <div class="container bannertabs">
     <div class="row">
-      <div class="col-md-9">
-          <ul>
-              <li><a href="#"><span><img src="/img/topicon.png" alt="" class="img-fluid"></span> Healthcare Staffing</a></li>
-              <li><a href="#"><span><img src="/img/topicon2.png" alt="" class="img-fluid"></span> IT Solutions</a></li>
-          </ul>
+      <div class="col-md-9">       
+        {{ with .text }}
+          <div class="d-flex text-center align-items-center flex-column h-100 justify-content-center">
+            {{ . | markdownify }}
+          </div>
+        {{ end }}
+
+          {{ if not (.text) }}
+          <ul class="nav nav-tabs" id="myTab" role="tablist" id="myTab" role="tablist">
+           
+
+            <li class="nav-item" role="presentation">
+              
+              <button class="nav-link  active" id="health-tab" data-bs-toggle="tab" data-bs-target="#health" type="button" role="tab" aria-controls="health" aria-selected="true"><span><img src="/img/topicon.png" alt="" class="img-fluid"></span> Healthcare Staffing</button>
+          </li>
+
+            <li class="nav-item " role="presentation">
+              <button class="nav-link" id="it-tab" data-bs-toggle="tab" data-bs-target="#it" type="button" role="tab" aria-controls="it" aria-selected="false"><span><img src="/img/topicon2.png" alt="" class="img-fluid"></span> IT Solutions</button>
+              </li>
+
+        </ul>
+
+        {{end}}
+        
+          
       </div>
       
       <div class="col-md-3 jobbg">
           <div class="lookingjob">
-              <h3>Looking to JOB?</h3>
+              <h3>Looking to JOB? </h3>
               <p><a class="btn btn-lg btn-primary" href="#"><i class="bi bi-search"></i> Search Jobs</a></p>
           </div>
       </div>
   </div>
 </div>
+
+<!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+    </li>
+    <li class="nav-item" role="presentation">
+     
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+    </li>
+  </ul> -->

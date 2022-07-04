@@ -1,0 +1,40 @@
+{{ if .enable }}
+{{ $odd := false }}
+{{ $type := .type }}
+{{ $lead := .lead }}
+{{ $layout := .layout | default "primary" }}
+{{ $class := .class }}
+   
+   <!-- ======= Staffing Section ======= -->
+   <section class="staffing">
+   		<div class="container">
+        	<div class="row">
+            	<div class="col-md-12 text-center">
+                	<div class="d-flex align-items-center justify-content-center mb-2"><span class="custom-line">&nbsp;</span> <h3>{{.subHeading}}</h3></div>
+                    <h2>{{.heading}}</h2>
+                    <p>{{.text | markdownify}} </p>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-7">
+                 <ul class="steps">
+                    {{ $count := 1 }}
+                    {{ range $i, $data := .lists }}
+                   
+                    <li>
+                        <div class="step-number">{{ $count := add $i 1 }} {{ $count }}</div>
+                        <div class="text">
+                            <h3>{{.heading}}</h3>
+                            <p>{{.text | markdownify}}
+                            </p>
+                        </div>
+                    </li>
+                    {{end}}
+                 </ul>
+             </div>
+             <div class="col-md-5"><img src="{{.image}}" alt="" class="img-fluid"></div>
+         </div>
+        </div>
+   </section>
+   {{end}}

@@ -1,0 +1,27 @@
+{{ if .enable }}
+{{ $odd := false }}
+{{ $type := .type }}
+{{ $lead := .lead }}
+{{ $layout := .layout | default "primary" }}
+{{ $class := .class }}
+<!-- ======= Who We Are ======= -->
+   <section class="section whoweare {{$class}}">
+   	  <div class="container">
+      	<div class="row align-items-center mb-4">
+        	<div class="col-lg-7 mb-5 mb-lg-0">
+            	<div class="d-flex align-items-center mb-2"><span class="custom-line">&nbsp;</span> <h3> {{.subHeading}}</h3></div>
+                <h2>{{.heading}}</h2>
+                {{ .text | markdownify }}
+
+                {{with .button }}
+                    {{ if .enable  }}
+                    <a href="{{.link}}" class="btn btn-secondary mt-5">{{.label}}</a>
+                    {{end}}
+                {{end}}
+            </div>
+            
+            <div class="col-lg-5"><img src="{{.image}}" alt="" class="img-fluid"></div>
+        </div>
+      </div>
+   </section>
+{{ end }}

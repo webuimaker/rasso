@@ -1,0 +1,59 @@
+{{ if .enable }}
+{{ $odd := false }}
+{{ $type := .type }}
+{{ $lead := .lead }}
+{{ $layout := .layout | default "primary" }}
+{{ $class := .class }}
+
+  <!-- ======= Banner Section ======= -->
+  <section id="hero" class="{{ $class}}">
+  	<div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <div class="carousel-inner">
+        {{ range $i, $data := .lists }}
+          {{if not (modBool $i 2)}}
+            {{ $odd = true }}
+            {{ else }}
+              {{ $odd = false }}
+          {{ end }}
+          
+          <div class="carousel-item {{ if eq $i 0 }} active{{end}}">
+            <img src="{{ .image }} " class="img-fluid" alt="">
+            <div class="carousel-caption text-end">
+              <h1>{{.heading}}</h1>
+              <h2><span>{{.subHeading}}</span></h2>
+              <p>{{.text}}</p>
+              {{ with  .button }}
+                {{ if .enable }}
+                  <p><a class="btn btn-lg btn-primary {{.klass}}" href="{{.link}}">{{.label}}</a></p>
+                {{ end }}
+              {{ end }}
+            </div>
+          </div>
+        {{end}}
+      </div>
+      {{ range $i, $data := .lists }}
+        {{ if gt $i 0 }}
+          <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          {{end}}
+      {{ end }}
+    </div>
+
+  </section>
+
+  {{- partial "tab.html" . -}}
+
+
+  {{ end }}
+
+  

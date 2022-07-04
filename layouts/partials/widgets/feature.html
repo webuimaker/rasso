@@ -1,0 +1,15 @@
+{{ if .enable }}
+{{ $odd := false }}
+{{ $type := .type }}
+{{ $lead := .lead }}
+{{ $layout := .layout | default "primary" }}
+{{ $class := .class }}
+<div class="container bannerlist {{$class}}">
+    <div class="row">
+        {{ range $i, $data := .lists }}
+      <div class="col-6 col-xl-3 mb-5 mb-xl-0">
+          <div class="d-flex align-items-center"><span><img src="/img/icon1.png" alt="" class="img-fluid"></span> {{.}}</div>
+      </div>{{end}}
+  </div>
+</div>
+{{end}}
