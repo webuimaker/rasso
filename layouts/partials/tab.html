@@ -8,7 +8,7 @@
         {{ end }}
 
           {{ if not (.text) }}
-          <ul class="nav nav-tabs" id="myTab" role="tablist" id="myTab" role="tablist">
+          <!-- <ul class="nav nav-tabs" id="myTab" role="tablist" id="myTab" role="tablist">
            
 
             <li class="nav-item" role="presentation">
@@ -20,7 +20,16 @@
               <button class="nav-link" id="it-tab" data-bs-toggle="tab" data-bs-target="#it" type="button" role="tab" aria-controls="it" aria-selected="false"><span><img src="/img/topicon2.png" alt="" class="img-fluid"></span> IT Solutions</button>
               </li>
 
-        </ul>
+        </ul> -->
+
+        <ul>
+            	<li><a href="/" ><span><img src="/img/topicon.png" alt="" class="img-fluid"></span> Healthcare Staffing
+                {{ .Params.tabs }}
+              
+              
+              </a></li>
+                <li><a href="/it-solutions/" ><span><img src="/img/topicon2.png" alt="" class="img-fluid"></span> IT Solutions</a></li>
+            </ul>
 
         {{end}}
         

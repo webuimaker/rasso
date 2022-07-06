@@ -30,7 +30,7 @@ a:hover {
 .bannertabs{box-shadow:0 5px 25px 0 rgba(214, 215, 216, 0.6); background:#fff; border-radius:8px; margin:-250px auto 30px; position:relative; z-index:8;}
 .bannertabs ul{margin:0px; padding:0;}
 .bannertabs li{display:inline-block; width:49%; text-align:center; float:left;
-  .nav-link{
+  a{
     border: 0px;
     width: 100%;
     border-top:8px solid #fff;
@@ -41,9 +41,9 @@ a:hover {
     }
   }
 }
-.bannertabs li button, .bannertabs li button span{display:block; color:#0aa9b9; font-size:38px; font-weight:800; text-transform:uppercase;  padding:10px 0 30px;}
-.bannertabs li .nav-link:hover{border-top:8px solid #f6bb1f;}
-.bannertabs li:nth-child(2) button{color:#199381;}
+.bannertabs li a, .bannertabs li a span{display:block; color:#0aa9b9; font-size:38px; font-weight:800; text-transform:uppercase;  padding:10px 0 30px;}
+.bannertabs li a:hover{border-top:8px solid #f6bb1f;}
+.bannertabs li:nth-child(2) a{color:#199381;}
 .bannertabs .jobbg{background:#f0f0f0; border-radius:0px 8px 8px 0px;}
 .bannertabs .lookingjob{padding:50px 0; text-align:center;}
 .bannertabs .lookingjob h3{margin-bottom:15px;}

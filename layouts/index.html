@@ -1,14 +1,18 @@
 {{ define "main" }}
-    <div class="tab-content" id="myTabContent">
-        {{ range $i, $data := .Params.tabs }}
-            <div class="tab-pane fade  {{ if eq $i 0 }}show active{{end}}" id="{{.name | lower}}" role="tabpanel" aria-labelledby="{{.name | lower}}-tab">
-               
-                {{ partial "widgets.html" .widgets.before }}
-            </div>
 
-        {{end}}
+{{ partial "widgets.html" .Params.widgets.before }}
+
+{{ if .Content }}
+<section class="section main-section">
+    <div class="container">
+        <div class="row"> 
+            <div class="col-md-12">   
+                {{ .Content }}
+            </div>
+        </div>
     </div>
+</section>
+{{end}}
+{{ partial "widgets.html" .Params.widgets.after }}
 
 {{end}}
-
-

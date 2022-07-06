@@ -1,17 +1,18 @@
 ---
-title: Raisso
+title: It Solution
+tabs: it-solution
 widgets: 
   before:
     - enable: true
       type: hero
       lists:
       - heading: |
-          Revolutionizing Healthcare with
+          Ingenious IT Solutions 
         subHeading: | 
-          Momentous Medical
+          Empowering the future
         text: |
-          Staffing Solutions
-        image: /img/banner2.png
+            of Healthcare with Raisso
+        image: /img/banner.png
         button:
           enable: true
           label: "Learn More"
@@ -28,16 +29,18 @@ widgets:
     - enable: true
       type: about
       heading: |
-        Healthcare Staffing 
+        IT Staffing Solutions
       subHeading: | 
         Who We Are
       text: |
-        *Preemptively evaluating your needs and equipping you with the best resource- Quality Staff.*    
+        *Established pioneers delivering exceptional IT talent since _____ (year of inception)*    
 
-        For any organization, recruiting the right talent is as crucial as it is cumbersome. We’re here to make it convenient! Our diligent team with the best **medical staffing solutions** facilitates your hiring process and helps you find the perfect additions that add skill, positivity and tremendous value to your organization.    
+        With rich experience and a keen eye for driven candidates, Raisso has rightfully built a stellar reputation in IT staffing by delivering the best, most adaptive applications exhibiting state-of-the-art technology and intricate development.
 
-        And for Healthcare professionals, no matter full-time, travel-based, or remote, we are an ideal provider with varied opportunities in several fields like nursing, therapy, medical laboratory, imaging, oncology, cardiopulmonary, and neurodiagnostic.
-      image: /img/imgright.png
+        Exercising model utilization of our deep, vast database with the utmost discretion allows us to support our clients in acquiring the top talent based on skill, quality of service and diversity.
+
+        Here at Raisso, we take pride in our spotless ability to consistently fulfill our clients’ business goals while saving on those bucks with our avant-garde Java applications; Applications developed following the most ideal protocols, specifically designed to recognize and work upon your facility’s requisites and areas with scope of improvement.
+      image: /img/it.png
       button:
         enable: false
         label: "Learn More"
@@ -47,10 +50,10 @@ widgets:
     - enable: true
       type: cta
       heading: | 
-        <span>Healthcare Staffing</span> services you can rely on! 
+        <span>Healthcare Staffing services you can rely on!</span>
       text: | 
-        Thanks to census fluctuations, seasonal needs, turnover issues, and whatnot, staffing needs can arise anytime! That’s where our exceptionally trained travel nurses will come to the rescue!
-      image: /img/health-bg.jpg
+        Thanks to census fluctuations, seasonal needs, turnover issues, and whatnot, staffing needs can arise anytime! Our exceptionally trained travel nurses will come to the rescue!
+      image: /img/it-cta.jpg
       button:
         enable: true
         label: "Talk to our Travel Team"
@@ -66,7 +69,7 @@ widgets:
       text: |
         Raisso overtakes the entire recruitment process to locate, approach and close prospects   
         with stellar credentials best-suited for your organization.
-      image: /img/it-health.png
+      image: /img/it-why.jpg
       lists:
       - heading: |
           Time Efficient
