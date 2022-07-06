@@ -1,0 +1,79 @@
+{{ if .enable }}
+{{ $odd := false }}
+{{ $type := .type }}
+{{ $lead := .lead }}
+{{ $layout := .layout | default "primary" }}
+{{ $class := .class }}
+<section class="benefit-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="d-flex align-items-center justify-content-center mb-2"><span class="custom-line">&nbsp;</span> <h3>Testimonials</h3></div>
+                <h2> WHAT PEOPLE SAYS
+
+                    {{ range $.Site.Data.review }}
+
+                        {{.}}
+
+                    {{end}}
+
+                </h2>
+            </div>
+        </div>
+<div class="row">
+		<div class="col-sm-12 testimonials">
+			<div id="myCarousel"  class="carousel carousel-dark slide" data-bs-ride="carousel">
+				<!-- Carousel indicators -->
+				
+                <div class="carousel-indicators d-none">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div> 
+				<!-- Wrapper for carousel items -->
+				<div class="carousel-inner" >
+                    {{ range $i, $data := .items }}
+
+                        <div class="carousel-item {{if eq $i 0}}active{{end}} ">
+                            <div class="row">
+                                <div class="col-sm-1 offset-1">
+                                    <div class="media">
+                                        <img src="{{.image}}" class="mr-3" alt="{{.name}}">
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-10">
+                                        <div class="media-body">
+                                            <div class="testimonial">
+                                                <p>{{.text}}</p>
+                                                <p class="overview"><b>{{.name}}</b>, {{.position}}</p>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>			
+                        </div>
+
+                    {{end}}
+
+			
+				</div>
+                <div class="btn-next-pre d-none">
+                    
+                      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+
+                </div>
+			
+                
+            </div>
+		</div>
+	</div>
+    </div>
+    </section>
+{{end}}

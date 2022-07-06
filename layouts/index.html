@@ -2,11 +2,15 @@
 
 {{ partial "widgets.html" .Params.widgets.before }}
 
+
+
 {{ if .Content }}
 <section class="section main-section">
     <div class="container">
         <div class="row"> 
-            <div class="col-md-12">   
+            <div class="col-md-12">  
+               
+
                 {{ .Content }}
             </div>
         </div>

@@ -13,13 +13,9 @@
                <div class="foot-mdl">
                      <h4>Quick Links</h4>
                      <ul>
-                         <li><a href="#"><i class="bi bi-chevron-right"></i> Home</a></li>
-                         <li><a href="#"><i class="bi bi-chevron-right"></i> About Us</a></li>
-                         <li><a href="#"><i class="bi bi-chevron-right"></i> Healthcare Stafing</a></li>
-                         <li><a href="#"><i class="bi bi-chevron-right"></i> IT Staffing</a></li>
-                         <li><a href="#"><i class="bi bi-chevron-right"></i> Terms of Services</a></li>
-                         <li><a href="#"><i class="bi bi-chevron-right"></i> Privacy Policy</a></li>
-                         <li><a href="#"><i class="bi bi-chevron-right"></i> Contact US</a></li>
+                      {{ range .Site.Params.footerlink }}
+                      <li><a href="{{.url}}"><i class="bi bi-chevron-right"></i> {{.name}}</a></li>
+                    {{ end }}
                      </ul>
                  </div>
              </div>
@@ -52,6 +48,12 @@
  <script src="/owlcarousel/jquery.min.js"></script>
  <script src="/owlcarousel/owl.carousel.js"></script>
 <script>
+
+var myCarousel = document.querySelector('#myCarousel')
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: 2000,
+  wrap: false
+})
          $(document).ready(function() {
            $('.owl-carousel').owlCarousel({
              loop: true,

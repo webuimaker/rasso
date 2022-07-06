@@ -92,80 +92,56 @@ url = "/"
 icon = "fab fa-instagram"
 
 [[params.footerlink]]
-  identifier = 'Opscore'
-  name = 'Opscore'
+  identifier = 'Home'
+  name = 'Home'
   post = ""
   pre = ""
-  url = 'solutions/opscore/'
+  url = '/'
   weight = 1
 [[params.footerlink]]
-  identifier = 'CoCo33'
-  name = 'CoCo33'
+  identifier = 'About Us'
+  name = 'About Us'
   post = ""
   pre = ""
-  url = 'solutions/cococ33/'
+  url = '/about-us/'
   weight = 2
 [[params.footerlink]]
-  identifier = 'Volatility Management'
-  name = 'Volatility Management'
+  identifier = 'Healthcare Stafing'
+  name = 'Healthcare Stafing'
   post = ""
   pre = ""
-  url = 'solutions/volatilitymanagement/'
+  url = '/healthcare-stafing'
   weight = 3
-
-  
-[[params.publicationslinks]]
-  identifier = 'Articles'
-  name = 'Articles'
+[[params.footerlink]]
+  identifier = 'IT Staffing'
+  name = 'IT Staffing'
   post = ""
   pre = ""
-  url = '/publications/#articles'
-  weight = 1
-[[params.publicationslinks]]
-  identifier = 'Videos'
-  name = 'Videos'
-  post = ""
-  pre = ""
-  url = '/publications/#video'
-  weight = 2
-
-  
-[[params.ito33]]
-  identifier = 'About ITO33'
-  name = 'About ITO33'
-  post = ""
-  pre = ""
-  url = '/management/'
-  weight = 1
-[[params.ito33]]
-  identifier = 'Management Team'
-  name = 'Management Team'
-  post = ""
-  pre = ""
-  url = '/management/'
-  weight = 2
-[[params.ito33]]
-  identifier = 'Careers'
-  name = 'Careers'
-  post = ""
-  pre = ""
-  url = '/career/'
-  weight = 3
-[[params.ito33]]
-  identifier = 'Our Clients'
-  name = 'Our Clients'
-  post = ""
-  pre = ""
-  url = '/our-clients/'
+  url = '/it-stafing'
   weight = 4
-  
-[[params.contact]]
-  identifier = ""
-  name = 'Contact'
+[[params.footerlink]]
+  identifier = 'Terms of Services'
+  name = 'Terms of Services'
+  post = ""
+  pre = ""
+  url = '/terms-service/'
+  weight = 5
+[[params.footerlink]]
+  identifier = 'Privacy Policy'
+  name = 'Privacy Policy'
+  post = ""
+  pre = ""
+  url = '/privacy-policy/'
+  weight = 6
+[[params.footerlink]]
+  identifier = 'Contact US'
+  name = 'Contact US'
   post = ""
   pre = ""
   url = '/contact-us/'
-  weight = 5
+  weight = 7
+ 
+
     
 
 [minify.tdewolff.html]

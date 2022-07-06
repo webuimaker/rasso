@@ -43,13 +43,29 @@ widgets:
       link: "/healthcare-staffing/"
       class:
   - enable: true
-    type: slider
+    type: review
+    items:
+    - name: THOMAS SMITH
+      position: client
+      titleTextColor: "#fff"  
+      image: "/img/testimonial1.jpg"
+      text: "Great Work, with excellent availability of resources and flexibility to personalize any type of website." 
+    - name: ANGIE OTTIX
+      position: client
+      titleTextColor: "#fff"  
+      image: "/img/testimonial2.jpg"
+      text: "Their service responded within a few minutes. So happy with this company and my customer loves it too! We will definitely use Raisoo again!" 
+    - name: MARIO CRUISER
+      position: client
+      titleTextColor: "#fff"  
+      image: "/img/testimonial3.jpg"
+      text: "Support took care of everything quickly and had us up and running within a few hours. Thank you so much for providing brilliant services. Highly recommended!" 
   - enable: true
     type: cta
     heading: | 
       <span>Healthcare Staffing</span> services you can rely on! 
     text: | 
-      Thanks to census fluctuations, seasonal needs, turnover issues, and whatnot, staffing needs can arise anytime! That’s where our exceptionally trained travel nurses will come to the rescue!
+      Thanks to census fluctuations, seasonal needs, turnover issues, and whatnot, **healthcare staffing** needs can arise anytime! That’s where our exceptionally trained travel nurses will come to the rescue!
     image: /img/health-bg.jpg
     bottomcurve: false
     button:

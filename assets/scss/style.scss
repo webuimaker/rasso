@@ -425,5 +425,15 @@ a:hover {
 
 }
 
+.testimonials{
+  .carousel-inner{
+    min-height: 180px;
+  }
+  .btn-next-pre{
+    position: relative;
+    margin-top: 30px;
+  }
+}
+
 
 

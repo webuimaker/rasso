@@ -23,12 +23,11 @@
         </ul> -->
 
         <ul>
-            	<li><a href="/" ><span><img src="/img/topicon.png" alt="" class="img-fluid"></span> Healthcare Staffing
-                {{ .Params.tabs }}
-              
+            	<li><a href="/" {{ if  ne .tabs "it-solution"}} class="active" {{end}} ><span><img src="/img/topicon.png" alt="" class="img-fluid"></span> Healthcare Staffing
+               
               
               </a></li>
-                <li><a href="/it-solutions/" ><span><img src="/img/topicon2.png" alt="" class="img-fluid"></span> IT Solutions</a></li>
+                <li><a href="/it-solutions/" {{ if  eq .tabs "it-solution"}} class="active" {{end}}><span><img src="/img/topicon2.png" alt="" class="img-fluid"></span> IT Solutions</a></li>
             </ul>
 
         {{end}}

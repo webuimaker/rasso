@@ -1,10 +1,10 @@
 ---
 title: It Solution
-tabs: it-solution
 widgets: 
   before:
     - enable: true
       type: hero
+      tabs: it-solution
       lists:
       - heading: |
           Ingenious IT Solutions 
