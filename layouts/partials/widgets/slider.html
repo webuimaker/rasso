@@ -8,57 +8,30 @@
   <section class="benefit-section">
   	<div class="container">
     	<div class="row">
-            	<div class="col-md-12 text-center">
-                	<div class="d-flex align-items-center justify-content-center mb-2"><span class="custom-line">&nbsp;</span> <h3>Benefits</h3></div>
-                    <h2>Benefits of Choosing Raisso for Nurse Staffing</h2>
-                    <p>Our dedicated staffing teams specialize in locating and placing physicians and advanced practitioners to meeting your facilities specific requests, with the ability to work multiple shifts and assignments.</p>
-                </div>
+        <div class="col-md-12 text-center">
+            <div class="d-flex align-items-center justify-content-center mb-2"><span class="custom-line">&nbsp;</span> 
+              <h3>{{.subHeading}}</h3>
             </div>
+            <h2>{{.heading}}</h2>
+            <p>{{.text | markdownify}} </p>
+        </div>
+      </div>
             
         <div class="row carouselsection">
         	<div class="owl-carousel owl-theme">
-					<div class="item">
-							<div class="icon-box">
-                              <div class="icon"><img src="assets/img/icon3.png" alt="" class="img-fluid"></div>
-                              <h3>Saving Time</h3>
-                              <p>You no longer need to read dozens and dozens of applications.</p>
-                			</div>
-			 		</div>
-			 		<div class="item">
-							<div class="icon-box">
-                              <div class="icon"><img src="assets/img/icon4.png" alt="" class="img-fluid"></div>
-                              <h3>Marketing</h3>
-                              <p>You no longer need to read dozens and dozens of applications.</p>
-                			</div>
-			 		</div>
-                    <div class="item">
-							<div class="icon-box">
-                              <div class="icon"><img src="assets/img/icon5.png" alt="" class="img-fluid"></div>
-                              <h3>Benefits And PayTime</h3>
-                              <p>You no longer need to read dozens and dozens of applications.</p>
-                			</div>
-			 		</div>
-                    <div class="item">
-							<div class="icon-box">
-                              <div class="icon"><img src="assets/img/icon3.png" alt="" class="img-fluid"></div>
-                              <h3>Saving Time</h3>
-                              <p>You no longer need to read dozens and dozens of applications.</p>
-                			</div>
-			 		</div>
-                    <div class="item">
-							<div class="icon-box">
-                              <div class="icon"><img src="assets/img/icon3.png" alt="" class="img-fluid"></div>
-                              <h3>Saving Time</h3>
-                              <p>You no longer need to read dozens and dozens of applications.</p>
-                			</div>
-			 		</div>
-                    <div class="item">
-							<div class="icon-box">
-                              <div class="icon"><img src="assets/img/icon3.png" alt="" class="img-fluid"></div>
-                              <h3>Saving Time</h3>
-                              <p>You no longer need to read dozens and dozens of applications.</p>
-                			</div>
-			 		</div>
+            {{ range $i, $data := .lists }}
+              <div class="item">
+							  <div class="icon-box">
+                  {{ with .icon }}
+                  <div class="icon"><img src="{{.}}" alt="icon" class="img-fluid"></div>
+                  {{end}}
+                  <h3>{{.heading}}</h3>
+                  {{.text | markdownify }}
+                </div>
+			 		    </div>
+            {{ end }}
+
+
 				</div>
         </div>
     </div>

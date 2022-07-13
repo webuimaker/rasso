@@ -1,0 +1,36 @@
+{{ if .enable }}
+{{ $odd := false }}
+{{ $type := .type }}
+{{ $lead := .lead }}
+{{ $layout := .layout | default "primary" }}
+{{ $class := .class }}
+   
+   <!-- ======= Worked Section Bottom ======= -->
+   <section class="workedsection">
+       <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center mb-5">
+                <div class="d-flex align-items-center justify-content-center mb-2"><span class="custom-line">&nbsp;</span> <h3>{{.subHeading}}</h3></div>
+                <h2>{{.heading}}</h2>
+                <p>{{.text | markdownify}} </p>
+            </div>
+        </div>
+
+           <div class="row">
+               <div class="col-md-12 carouselright">
+                   <div class="owl-two owl-theme">
+                    {{ $count := 1 }}
+                        {{ range $i, $data := .lists }}    
+                                <div class="item">
+                                    <div class="icon-box">
+                                      <span><img src="{{.image}}" alt="{{.name}}" class="img-fluid"></span> {{.name}}
+                                    </div>
+                             </div>
+                        {{end}}
+                   </div>
+               </div>
+           </div>
+         
+       </div>
+   </section>
+{{end}}

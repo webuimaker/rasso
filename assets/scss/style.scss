@@ -140,14 +140,14 @@ a:hover {
 /*--------------------------------------------------------------
 # Number Section
 --------------------------------------------------------------*/
-.numbersection{background:url(../assets/img/whowebg.png) no-repeat center top; min-height:433px; display:flex; align-items:center;}
+.numbersection{background:url(../img/whowebg.png) no-repeat center top; min-height:433px; display:flex; align-items:center;}
 .numbersection h4{font-weight:800; color:#fff; font-size:36px;}
 .numbersection h6{color:#fff; font-size:18px;}
 .numbersection .btn-secondary{width:auto; background:#059baa; border:0; font-size:18px; padding:8px 30px;}
 .numbersection .btn-secondary:hover{background:#000;}
 
 /*--------------------------------------------------------------
-# staffing Section
+# staffing Section 
 --------------------------------------------------------------*/
 .staffing{background:#f6f7f9; padding:85px 0;}
 .staffing .custom-line, .benefit-section .custom-line{margin-top:-5px;}
@@ -161,6 +161,9 @@ a:hover {
 .benefit-section{padding:50px 0;}
 .benefit-section .icon-box{padding: 30px; position: relative; text-align:center; border-radius: 8px; background:#f7f7f7; min-height:315px;}
 .benefit-section h3{font-size:26px; font-weight:800; color:#0d4159; margin:8px 0;}
+.benefit-section .icon-box ul{
+  text-align: left;
+}
 
 /*--------------------------------------------------------------
 # Travel Section
